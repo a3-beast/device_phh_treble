@@ -42,17 +42,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:system/etc/usb_audio_policy_configuration.xml
 
-# NFC:
-#   Provide default libnfc-nci.conf file for devices that does not have one in
-#   vendor/etc
-PRODUCT_COPY_FILES += \
-	device/phh/treble/nfc/libnfc-nci.conf:system/phh/libnfc-nci-oreo.conf \
-	device/phh/treble/nfc/libnfc-nci-huawei.conf:system/phh/libnfc-nci-huawei.conf
-
-# LineageOS build may need this to make NFC work
-PRODUCT_PACKAGES += \
-        NfcNci  
-
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
 	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
@@ -97,15 +86,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/interfaces.xml:system/etc/permissions/interfaces.xml
-
-PRODUCT_COPY_FILES += \
-	device/phh/treble/files/samsung-gpio_keys.kl:system/phh/samsung-gpio_keys.kl \
-	device/phh/treble/files/samsung-sec_touchscreen.kl:system/phh/samsung-sec_touchscreen.kl \
-	device/phh/treble/files/oneplus6-synaptics_s3320.kl:system/phh/oneplus6-synaptics_s3320.kl \
-	device/phh/treble/files/huawei-fingerprint.kl:system/phh/huawei/fingerprint.kl \
-	device/phh/treble/files/samsung-sec_e-pen.idc:system/usr/idc/sec_e-pen.idc \
-	device/phh/treble/files/samsung-9810-floating_feature.xml:system/ph/sam-9810-flo_feat.xml \
-	device/phh/treble/files/mimix3-gpio-keys.kl:system/phh/mimix3-gpio-keys.kl
 
 SELINUX_IGNORE_NEVERALLOWS := true
 
