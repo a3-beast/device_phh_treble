@@ -1,3 +1,9 @@
+ro.sf.lcd_density=320
+rild.libpath=mtk-ril.so
+rild.libargs=-d /dev/ttyC0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
+ro.sys.usb.mtp.whql.enable=0
 ro.adb.secure=0
 #Some devices have sdcardfs kernel panicing on 8.0
 #Disable for everyone for the moment
