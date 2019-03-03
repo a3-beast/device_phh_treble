@@ -26,11 +26,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 	ro.adb.secure=0 \
 	ro.logd.auditd=true
 	
-#Huawei HiSuite (also other OEM custom programs I guess) it's of no use in AOSP builds
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-	persist.sys.usb.config=adb \
-	ro.cust.cdrom=/dev/null	
-
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
@@ -46,7 +41,6 @@ PRODUCT_COPY_FILES += \
 	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
 
 PRODUCT_COPY_FILES += \
-	device/phh/treble/empty:system/phh/empty \
 	device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
@@ -55,12 +49,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	bootctl \
 	vintf
-
-# Fix Offline Charging on Huawmeme
-PRODUCT_PACKAGES += \
-	huawei-charger
-PRODUCT_COPY_FILES += \
-	$(call find-copy-subdir-files,*,device/phh/treble/huawei_charger/files,system/etc/charger)
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/twrp/twrp.rc:system/etc/init/twrp.rc \
@@ -76,21 +64,7 @@ PRODUCT_PACKAGES += \
 	fsck.exfat
 endif
 
-PRODUCT_PACKAGES += \
-	android.hardware.wifi.hostapd-V1.0-java \
-	vendor.huawei.hardware.biometrics.fingerprint-V2.1-java \
-	vendor.huawei.hardware.tp-V1.0-java \
-	vendor.qti.hardware.radio.am-V1.0-java \
-	vendor.qti.qcril.am-V1.0-java \
-
-PRODUCT_COPY_FILES += \
-	device/phh/treble/interfaces.xml:system/etc/permissions/interfaces.xml
-
 SELINUX_IGNORE_NEVERALLOWS := true
-
-# Universal NoCutoutOverlay
-PRODUCT_PACKAGES += \
-    NoCutoutOverlay
 
 PRODUCT_PACKAGES += \
     lightsctl \
