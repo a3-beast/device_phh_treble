@@ -29,8 +29,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #VNDK config files
 PRODUCT_COPY_FILES += \
 	device/phh/treble/vndk-detect:system/bin/vndk-detect \
-	device/phh/treble/vndk.rc:system/etc/init/vndk.rc \
-	device/phh/treble/ld.config.26.txt:system/etc/ld.config.26.txt \
+	device/phh/treble/vndk.rc:system/etc/init/vndk.rc
 
 #USB Audio
 PRODUCT_COPY_FILES += \
@@ -38,9 +37,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
-	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
-
-PRODUCT_COPY_FILES += \
+	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL \
 	device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
@@ -67,7 +64,6 @@ endif
 SELINUX_IGNORE_NEVERALLOWS := true
 
 PRODUCT_PACKAGES += \
-    lightsctl \
     uevent
 
 PRODUCT_COPY_FILES += \
