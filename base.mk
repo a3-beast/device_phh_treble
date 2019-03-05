@@ -37,7 +37,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	device/phh/treble/rw-system.sh:system/bin/rw-system.sh \
-	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL \
+	device/phh/treble/fixSPL/getSPL.arm:system/bin/getSPL
+
+PRODUCT_COPY_FILES += \
 	device/phh/treble/phh-on-boot.sh:system/bin/phh-on-boot.sh
 
 PRODUCT_PACKAGES += \
@@ -72,3 +74,6 @@ PRODUCT_COPY_FILES += \
 #MTK incoming SMS fix
 PRODUCT_PACKAGES += \
 	mtk-sms-fwk-ready
+	
+PRODUCT_PACKAGES += \
+    FMRadio
