@@ -1,10 +1,4 @@
-dalvik.vm.dex2oat-filter=speed
-dalvik.vm.image-dex2oat-filter=speed
-debug.egl.hw=0
-debug.enable.sglscale=1
 debug.sf.latch_unsignaled=1
-debug.sf.hw=0
-debug.sf.recomputecrop=0
 ro.sf.lcd_density=320
 rild.libpath=mtk-ril.so
 rild.libargs=-d /dev/ttyC0
@@ -17,6 +11,3 @@ ro.adb.secure=0
 ro.sys.sdcardfs=0
 persist.sys.overlay.nightmode=true
 ro.build.selinux=0
-
-ro.telephony.default_network=20,20
-DEVICE_PROVISIONED=1

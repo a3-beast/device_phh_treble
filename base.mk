@@ -74,6 +74,3 @@ PRODUCT_COPY_FILES += \
 #MTK incoming SMS fix
 PRODUCT_PACKAGES += \
 	mtk-sms-fwk-ready
-	
-PRODUCT_PACKAGES += \
-    FMRadio
